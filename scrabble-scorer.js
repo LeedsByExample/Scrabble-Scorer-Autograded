@@ -136,9 +136,7 @@ let newPointStructure = transform(oldPointStructure);
 function runProgram() {
    let prompt = initialPrompt();
    console.log(scorerPrompt(prompt));
-   //let prompt = initialPrompt();
-   //console.log(scorerPrompt(prompt));
-}
+};
 runProgram(); //was told not to call this... but program won't run if I don't???
 
 // Don't write any code below this line //
