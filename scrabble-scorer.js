@@ -43,10 +43,8 @@ function simpleScorer(word) {
    //Define a function that takes a word as a parameter and returns a numerical score. Each letter within the word is worth 1 point.
    return word.length;
 };
-//console.log(simpleScorer("hello"));
 
-//Define a function that takes a word as a parameter and returns a score. Each vowel within the word is worth 3 points, 
-//and each consonant is worth 1 point.
+//Define a function that takes a word as a parameter and returns a score. Each vowel word is 3 points and each consonant is 1 point.
 function vowelBonusScorer(word) {
    let points = 0;
    word = word.toLowerCase();
@@ -60,7 +58,6 @@ function vowelBonusScorer(word) {
    } 
    return points;
 };
-//console.log(vowelBonusScorer("leeda"));
 
 //let scrabbleScorer;
 function scrabbleScorer(word) {
@@ -75,24 +72,6 @@ function scrabbleScorer(word) {
 
 //Finish writing the scoringAlgorithms array. It should be populated with three objects, one for each of the three scoring options. 
 //Each object should contain three keys: name, description, and scoringFunction (NAME THIS KEY scorerFunction INSTEAD)
-
-// let simpleScore = {
-//    name: "Simple Score",
-//    description: "Each letter is worth 1 point.",
-//    scorerFunction: simpleScorer
-// };
-// let vowelBonus = {
-//    name: "Bonus Vowels",
-//    description: "Vowels are 3 pts, consonants are 1 pt.",
-//    scorerFunction: vowelBonusScorer
-// };
-// let oldScrabble = {
-//    name: "Scrabble",
-//    description: "The traditional scoring algorithm.",
-//    scorerFunction: oldScrabbleScorer
-// };
-// const scoringAlgorithms = [simpleScore, vowelBonus, oldScrabble];
-//console.log(scoringAlgorithms);
 
 const scoringAlgorithms = [
    {
@@ -111,7 +90,6 @@ const scoringAlgorithms = [
       scorerFunction: scrabbleScorer
    }
 ];
-//console.log(scoringAlgorithms);
 
 //Finish writing scorerPrompt() so that the user can select which scoring algorithm to use when the program scores their word. 
 //Use the selected algorithm to determine the score for the word
@@ -152,9 +130,8 @@ function transform(structure) {
    }
    return newPointStructure;
 };
-//   objectName["new-key"] = propertyValue;
-let newPointStructure = transform(oldPointStructure);
 
+let newPointStructure = transform(oldPointStructure);
 
 function runProgram() {
    let prompt = initialPrompt();
@@ -162,7 +139,7 @@ function runProgram() {
    //let prompt = initialPrompt();
    //console.log(scorerPrompt(prompt));
 }
-runProgram(); //don't call this?
+runProgram(); //was told not to call this... but program won't run if I don't???
 
 // Don't write any code below this line //
 // And don't change these or your program will not run as expected //
